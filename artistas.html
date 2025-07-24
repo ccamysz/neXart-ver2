@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artistas - neXart</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/img/logo.png" alt="Logo neXart" />
+        </a>
+      </div>
+
+      <nav class="nav-links" id="navMenu">
+        <a href="artistas.html">Artistas</a>
+        <a href="#chat">Chat</a>
+        <a href="#perfil">Perfil</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <a href="#login" class="btn-header">Entrar <i class="bi bi-person"></i></a>
+
+      <button class="menu-toggle" id="menuToggle">
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Conteúdo da página -->
+  <main class="content-artistas">
+    <section class="hero-busca" style="background-image:url('assets/img/img4.jpg');">
+  <div class="container">
+    <h1>Descubra artistas independentes<br>e explore portfólios criativos.</h1>
+
+    <div class="barra-completa">
+      <div class="select-filtro">
+        <i class="bi bi-image"></i>
+        <select id="selectFiltro">
+          <option value="todos">Todos</option>
+          <option value="ilustradora">Ilustração</option>
+          <option value="fotógrafa">Fotografia</option>
+          <option value="designer">Design Gráfico</option>
+          <option value="artista 3d">Arte 3D</option>
+        </select>
+      </div>
+
+      <input id="inputBusca" type="text" placeholder="Buscar por nome ou profissão...">
+      <button id="btnBusca"><i class="bi bi-search"></i></button>
+    </div>
+  </div>
+</section>
+
+<section class="artistas-galeria">
+  <div class="container">
+    <h2>Artistas em destaque</h2>
+
+    <div id="cardsContainer" class="cards-artistas"></div>
+
+    <div class="paginacao-artistas">
+      <button id="btnVerMais">Ver mais</button>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-logo">
+        <img src="assets/img/logo.png" alt="Logo neXart">
+        <p>Transformando criatividade em conexão digital.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Mapa do Site</h4>
+        <ul>
+          <li><a href="index.html#beneficios">Benefícios</a></li>
+          <li><a href="index.html#como-funciona">Como Funciona</a></li>
+          <li><a href="index.html#comparativo">Comparativo</a></li>
+          <li><a href="index.html#contato">Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-redes">
+        <h4>Redes Sociais</h4>
+        <ul>
+          <li><a href="#"><i class="bi bi-instagram"></i> Instagram</a></li>
+          <li><a href="#"><i class="bi bi-twitter-x"></i> Twitter</a></li>
+          <li><a href="#"><i class="bi bi-linkedin"></i> LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 neXart. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

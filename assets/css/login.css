@@ -1,0 +1,16 @@
+@import url('cadastro.css'); /* Reaproveitando o estilo do cadastro */
+
+#feedback {
+  font-size: 0.9rem;
+  border-radius: 8px;
+}
+#feedback.success {
+  background-color: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+#feedback.error {
+  background-color: #fff8f0;
+  color: #92400e;
+  border: 1px solid #ffd8b5;
+}

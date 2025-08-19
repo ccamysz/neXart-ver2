@@ -286,7 +286,7 @@ body {
   align-items: flex-start;
   border-bottom: 1px solid #ddd;
   padding: 1rem 0;
-  font-size: 0.95rem;
+  font-size: 1.2rem;
   color: var(--cinza);
   line-height: 1.4;
 }
@@ -376,10 +376,11 @@ body {
   padding: 80px 20px;
   background-color: var(--branco);
   text-align: center;
+
 }
 
 .comparativo .container {
-  max-width: 1000px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -395,7 +396,7 @@ body {
   width: 100%;
   border-collapse: collapse;
   background-color: var(--branco);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.144);
   border-radius: 12px;
   overflow: hidden;
 }
@@ -429,7 +430,7 @@ body {
 }
 
 .passos-nexart {
-  padding: 80px 20px;
+  padding: 80px 100px;
   background-color: var(--branco);
 }
 

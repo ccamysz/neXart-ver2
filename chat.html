@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat - NeXart</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/chat.css">
+</head>
+<body>
+  <!-- HEADER PADRÃO -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/img/logo.png" alt="Logo neXart" />
+        </a>
+      </div>
+
+      <nav class="nav-links" id="navMenu">
+        <a href="artistas.html">Artistas</a>
+        <a href="#especificacoes">Chat</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <a href="cadastro.html" class="btn-header">Entrar<i class="bi bi-person"></i></a>
+
+      <!-- Botão hamburguer -->
+      <button class="menu-toggle" id="menuToggle">
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+  </header>
+
+ <main class="chat-app">
+    <section class="surface">
+      <!-- SIDEBAR -->
+      <aside class="sidebar" id="sidebar">
+        <div class="search">
+          <input id="searchInput" type="text" placeholder="Pesquisar conversas..."/>
+        </div>
+        <ul class="contacts" id="contactList"></ul>
+      </aside>
+
+      <!-- CHAT MAIN -->
+      <section class="chat">
+        <div class="chat-header">
+          <button class="back-btn" id="openContacts">Contatos</button>
+          <img id="chatAvatar" class="avatar" src="https://i.pravatar.cc/96?img=5" alt="avatar"/>
+          <div class="chat-title">
+            <h3 id="chatName">—</h3>
+            <span id="chatSub">online agora</span>
+          </div>
+        </div>
+
+        <div class="messages" id="messages"></div>
+
+        <div class="inputbar">
+          <input type="file" id="fileInput" accept="image/*" hidden>
+          <button class="tool" id="btnPhoto" title="Enviar foto">📷</button>
+          <button class="tool" id="btnLocation" title="Compartilhar localização">📍</button>
+          <input class="textin" id="textInput" type="text" placeholder="Escreva uma mensagem..."/>
+          <button class="send" id="btnSend">Enviar</button>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <!-- OVERLAY MOBILE -->
+  <div class="overlay" id="overlay">
+    <aside class="drawer">
+      <div class="search" style="border-bottom:1px solid var(--cinza--medio)">
+        <button class="back-btn" id="closeContacts">Fechar</button>
+        <input id="mSearchInput" type="text" placeholder="Pesquisar conversas..."/>
+      </div>
+      <ul class="contacts" id="mContactList"></ul>
+    </aside>
+  </div>
+  
+  <script src="assets/js/chat.js"></script>
+</body>
+</html>

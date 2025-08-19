@@ -1,0 +1,25 @@
+{
+  "name": "nexart-ver2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.njs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccamysz/neXart-ver2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ccamysz/neXart-ver2/issues"
+  },
+  "homepage": "https://github.com/ccamysz/neXart-ver2#readme",
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "firebase": "^12.1.0"
+  }
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Perfil - NeXart</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/perfil.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</head>
+<body>
+     <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/img/logo.png" alt="Logo neXart" />
+        </a>
+      </div>
+
+      <nav class="nav-links" id="navMenu">
+        <a href="artistas.html">Artistas</a>
+        <a href="chat.html">Chat</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <a href="cadastro.html" class="btn-header">Entrar<i class="bi bi-person"></i></a>
+
+      <!-- Botão hamburguer -->
+      <button class="menu-toggle" id="menuToggle">
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+  </header>
+
+  <div id="app" class="page">
+
+    <!-- Banner / capa -->
+    <section class="cover-section">
+    <img id="bannerImg" alt="Banner do perfil" style="width:100%; height:100%; object-fit:cover;" />
+    <button id="btnEdit" class="btn primary edit-btn">Editar perfil</button>
+    </section>
+
+
+    <!-- Cabeçalho do perfil -->
+    <section class="profile container">
+      <div class="avatar-wrap">
+        <div class="avatar">
+          <img id="avatarImg" alt="Avatar" />
+        </div>
+        <span id="badgeType" class="badge">—</span>
+      </div>
+
+      <div class="identity">
+        <h1 id="displayName">—</h1>
+        <p id="bio" class="bio">Escreva uma breve bio sobre você.</p>
+
+        <div class="meta">
+          <span id="location" class="meta-item">—</span>
+          <a id="website" class="meta-item link" href="#" target="_blank" rel="noopener">Website</a>
+        </div>
+
+        <div class="actions">
+          <button class="btn">Seguir</button>
+          <button class="btn outline" id="contactBtn">Entrar em contato</button>
+        </div>
+      </div>
+
+      <ul class="stats">
+        <li><span id="followersCount" class="num">0</span><small>Followers</small></li>
+        <li><span id="followingCount" class="num">0</span><small>Following</small></li>
+        <li><span id="likesCount" class="num">0</span><small>Likes</small></li>
+      </ul>
+    </section>
+
+    <!-- Tabs -->
+    <nav class="tabs container" role="tablist">
+      <button class="tab active" role="tab" aria-selected="true">Work</button>
+      <button class="tab" role="tab" aria-selected="false">Moodboards</button>
+      <button class="tab" role="tab" aria-selected="false">Likes</button>
+      <button class="tab" role="tab" aria-selected="false">About</button>
+    </nav>
+
+    <!-- Galeria de trabalhos -->
+    <main class="container gallery" id="worksGrid"></main>
+
+    <!-- Painel de edição -->
+    <aside id="editor" class="editor" aria-hidden="true">
+      <div class="editor-card">
+        <div class="editor-header">
+          <h3>Editar perfil</h3>
+          <button id="closeEditor" class="icon-btn" aria-label="Fechar">✕</button>
+        </div>
+
+        <form id="profileForm" class="grid g2">
+          <label>
+            <span>Nome para exibição</span>
+            <input type="text" id="inpDisplayName" required />
+          </label>
+          <label>
+            <span>Tipo de usuário</span>
+            <select id="inpTipoUsuario" required>
+              <option value="Artista">Artista</option>
+              <option value="Contratante">Contratante</option>
+            </select>
+          </label>
+          <label class="g2">
+            <span>Bio</span>
+            <textarea id="inpBio" rows="3" maxlength="240"></textarea>
+          </label>
+          <label>
+            <span>Localização</span>
+            <input type="text" id="inpLocation" />
+          </label>
+          <label>
+            <span>Website</span>
+            <input type="url" id="inpWebsite" />
+          </label>
+
+          <div class="editor-actions g2">
+            <button type="submit" class="btn-primary">Salvar alterações</button>
+          </div>
+        </form>
+      </div>
+    </aside>
+  </div>
+
+  <script type="module" src="assets/js/perfil.js"></script>
+    <script type="module" src="assets/js/script.js"></script>
+
+</body>
+</html>

@@ -4,11 +4,34 @@
     margin: 18px auto;
     padding: 0 24px; 
 }
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    background: var(--branco);
+}
+
+.chat-app {
+    width: 98vw;
+    height: 94vh;
+    max-width: none;
+    margin: 3vh auto;
+    padding: 0;
+}
+
 .surface {
     display: grid;
     grid-template-columns: 320px 1fr;
     gap: 16px;
-    min-height: calc(100vh - 140px);
+    min-height: 98vh;
+    height: 98vh;
 }
 
 /* SIDEBAR */
@@ -122,7 +145,6 @@
     align-items: center;
     gap: 10px;
     padding: 12px 14px;
-    border-bottom: 1px solid var(--cinza--medio);
     position: sticky;
     top: 0;
     background: var(--branco);
@@ -192,7 +214,7 @@
 }
 
 .sent .bubble {
-    background: linear-gradient(135deg, var(--azul-medio), var(--azul-claro));
+    background: var(--azul-escuro);
     color: #fff;
     border: none;
 }
@@ -250,7 +272,6 @@
     align-items: center;
     gap: 8px;
     padding: 10px;
-    border-top: 1px solid var(--cinza--medio);
     background: #fff;
     border-bottom-left-radius: var(--radius);
     border-bottom-right-radius: var(--radius);

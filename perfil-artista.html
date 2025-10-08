@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil do Artista - NeXart</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html"><img src="assets/img/logo.png" alt="Logo NeXart"></a>
+      </div>
+      <nav class="nav-links">
+        <a href="artistas.html">Artistas</a>
+        <a href="chat.html">Chat</a>
+        <a href="perfil.html">Perfil</a>
+      </nav>
+      <a href="#" class="btn-header">Entrar <i class="bi bi-person"></i></a>
+    </div>
+  </header>
+
+  <main class="perfil-container">
+    <!-- CABEÇALHO DO PERFIL -->
+    <section class="perfil-header">
+      <img id="fotoArtista" class="perfil-foto" alt="Foto do artista">
+      <h1 id="nomeArtista"></h1>
+      <p id="profissaoArtista" class="profissao"></p>
+      <div id="estrelasArtista" class="estrelas"></div>
+
+      <div class="acoes-perfil">
+        <button id="btnSeguir" class="btn-seguir">Seguir</button>
+        <button id="btnConversar" class="btn-conversar">Conversar</button>
+      </div>
+      <p class="seguidores"><span id="contadorSeguidores"></span> seguidores</p>
+    </section>
+
+    <!-- BIO -->
+    <section class="perfil-bio">
+      <h2>Sobre</h2>
+      <p id="bioArtista"></p>
+    </section>
+
+    <!-- GALERIA -->
+    <section class="perfil-galeria">
+      <h2>Trabalhos Recentes</h2>
+      <div class="galeria-imagens" id="galeriaArtista">
+        <!-- imagens serão carregadas via JS -->
+      </div>
+    </section>
+
+    <!-- AVALIAÇÕES (estáticas por enquanto) -->
+    <section class="perfil-avaliacoes">
+      <h2>Avaliações de Clientes</h2>
+      <div class="avaliacoes">
+        <div class="avaliacao">
+          <p><strong>Maria Souza:</strong> Excelente profissional, o trabalho ficou perfeito!</p>
+        </div>
+        <div class="avaliacao">
+          <p><strong>Pedro Lima:</strong> Comunicação ótima e resultado impecável!</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>&copy; 2025 NeXart. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/perfil-artista.js"></script>
+</body>
+</html>

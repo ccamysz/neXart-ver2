@@ -30,6 +30,9 @@ const btnVerMais    = document.getElementById('btnVerMais');
 const selectFiltro  = document.getElementById('selectFiltro');
 const inputBusca    = document.getElementById('inputBusca');
 const btnBusca      = document.getElementById('btnBusca');
+const selectEstrelas = document.getElementById('selectEstrelas');
+const selectOrdem = document.getElementById('selectOrdem');
+
 
 let pagina = 0;
 const porPagina = 15; // 5 linhas * 3 colunas
@@ -48,10 +51,18 @@ function criarCard(a){
     <h3>${a.nome}</h3>
     <p>${a.profissao.charAt(0).toUpperCase()+a.profissao.slice(1)}</p>
     <div class="estrelas">${estrelasHTML(a.estrelas)}</div>
-    <button>Conversar</button>
+    <button class="btn-detalhes">Detalhes</button>
   `;
+
+  // Ao clicar em "Detalhes", salva o artista no localStorage e vai para a página do perfil
+  card.querySelector('.btn-detalhes').addEventListener('click', () => {
+    localStorage.setItem('artistaSelecionado', JSON.stringify(a));
+    window.location.href = 'perfil-artista.html';
+  });
+
   return card;
 }
+
 
 function renderPagina(){
   const ini = pagina*porPagina;
@@ -66,29 +77,42 @@ function renderPagina(){
   }
 }
 
-function resetEFiltrar(){
-  // filtro
+function resetEFiltrar() {
   const termoFiltro = selectFiltro.value;
-  const termoBusca  = inputBusca.value.trim().toLowerCase();
+  const termoBusca = inputBusca.value.trim().toLowerCase();
+  const estrelasMin = parseInt(selectEstrelas.value);
+  const tipoOrdem = selectOrdem.value;
 
-  listaAtual = artistas.filter(a=>{
-    const profOk = termoFiltro==='todos' || a.profissao.includes(termoFiltro);
-    const buscaOk = a.nome.toLowerCase().includes(termoBusca) ||
-                    a.profissao.toLowerCase().includes(termoBusca);
-    return profOk && buscaOk;
+  listaAtual = artistas.filter(a => {
+    const profOk = termoFiltro === 'todos' || a.profissao.includes(termoFiltro);
+    const buscaOk =
+      a.nome.toLowerCase().includes(termoBusca) ||
+      a.profissao.toLowerCase().includes(termoBusca);
+    const estrelasOk = a.estrelas >= estrelasMin;
+    return profOk && buscaOk && estrelasOk;
   });
 
-  // reset grid
-  container.innerHTML='';
-  pagina=0;
+  // Ordenação
+  if (tipoOrdem === 'az') {
+    listaAtual.sort((a, b) => a.nome.localeCompare(b.nome));
+  } else if (tipoOrdem === 'za') {
+    listaAtual.sort((a, b) => b.nome.localeCompare(a.nome));
+  }
+
+  // Resetar grid
+  container.innerHTML = '';
+  pagina = 0;
   renderPagina();
 }
+
 
 /* ========= EVENTOS ========= */
 btnVerMais.addEventListener('click',renderPagina);
 selectFiltro.addEventListener('change',resetEFiltrar);
 btnBusca.addEventListener('click',resetEFiltrar);
 inputBusca.addEventListener('keyup', e=>{ if(e.key==='Enter') resetEFiltrar(); });
+selectEstrelas.addEventListener('change', resetEFiltrar);
+selectOrdem.addEventListener('change', resetEFiltrar);
 
 /* ========= INICIAL ========= */
 resetEFiltrar();

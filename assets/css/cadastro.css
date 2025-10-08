@@ -42,7 +42,7 @@
 }
 
 .bg-img {
-  background: url('/assets/img/img5.jpg') center/cover no-repeat;
+  background: url('/assets/img/img5.png') center/cover no-repeat;
 }
 .form-select {
   background-color: var(--branco);
@@ -67,7 +67,7 @@
 
 .form-select:focus {
   border-color: var(--azul-claro);
-  box-shadow: 0 0 6px rgba(92, 169, 244, 0.6);
+  box-shadow: 0 0 6px rgb(1, 5, 8);
 }
 
 .form-select option {

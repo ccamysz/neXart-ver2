@@ -4,12 +4,10 @@ const perfilFake = {
   tipoUsuario: "Artista",
   bio: "Ilustradora digital apaixonada por cores vibrantes e mundos imaginários ✨",
   location: "Belo Horizonte, MG",
-  website: "https://lunamarts.art",
   followers: 1250,
   following: 320,
   likes: 7850,
   avatarUrl: "https://i.pravatar.cc/300?img=47",
-  bannerUrl: "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1200&q=80",
   works: [
     { title: "Montanha Silenciosa", category: "Paisagem", thumb: "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg" },
     { title: "Praia ao Entardecer", category: "Paisagem", thumb: "https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg" },
@@ -32,12 +30,10 @@ document.getElementById("displayName").textContent = perfilFake.displayName;
 document.getElementById("badgeType").textContent = perfilFake.tipoUsuario;
 document.getElementById("bio").textContent = perfilFake.bio;
 document.getElementById("location").textContent = perfilFake.location;
-document.getElementById("website").href = perfilFake.website;
 document.getElementById("followersCount").textContent = perfilFake.followers;
 document.getElementById("followingCount").textContent = perfilFake.following;
 document.getElementById("likesCount").textContent = perfilFake.likes;
 document.getElementById("avatarImg").src = perfilFake.avatarUrl;
-document.getElementById("bannerImg").src = perfilFake.bannerUrl;
 
 // Monta galeria
 const worksGrid = document.getElementById("worksGrid");
@@ -83,7 +79,6 @@ document.getElementById("profileForm").addEventListener("submit", e => {
   perfilFake.tipoUsuario = document.getElementById("inpTipoUsuario").value;
   perfilFake.bio = document.getElementById("inpBio").value;
   perfilFake.location = document.getElementById("inpLocation").value;
-  perfilFake.website = document.getElementById("inpWebsite").value;
 
   // Atualiza na tela
   document.getElementById("displayName").textContent = perfilFake.displayName;

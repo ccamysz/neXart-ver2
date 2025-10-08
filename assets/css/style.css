@@ -1038,7 +1038,7 @@ body {
 .section-label {
   font-size: 12px;
   text-transform: uppercase;
-  color: var(--cinza-claro);
+  color: var(--azul-escuro);
   letter-spacing: 1px;
 }
 
@@ -1051,7 +1051,6 @@ body {
 
 .section-subtitle {
   font-size: 16px;
-  color: var(--cinza-claro);
   margin-bottom: 40px;
 }
 
